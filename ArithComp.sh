@@ -23,4 +23,7 @@ do
 	array[$j]=$i
 	j=$(($j+1))
 done
-echo "ARRAY:" ${array[@]}
+echo "ARRAY:"${array[@]}
+arrD=($(for i in "${array[@]}"; do echo $i; done | sort -n))
+echo "ASSENDING ORDER" ${arrD[@]}
+
