@@ -1,0 +1,2 @@
+#!/bin/bash -x
+echo "SORTING ARITHMATIC COMPUTATION PROBLEM"
