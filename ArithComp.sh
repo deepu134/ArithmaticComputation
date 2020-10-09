@@ -1,5 +1,5 @@
 #!/bin/bash -x
-echo "SORTING ARITHMATIC COMPUTATION PROBLEM:"
+echo "SORTING ARITHMATIC COMPUTATION PROBLEM"
 read -p "ENTER THREE NUMBERS SEPARATED BY SPACE:" A B C
 declare -A dict
 exp1=$(($A+$B*$C))
@@ -24,6 +24,9 @@ do
 	j=$(($j+1))
 done
 echo "ARRAY:"${array[@]}
-arrD=($(for i in "${array[@]}"; do echo $i; done | sort -n))
-echo "ASSENDING ORDER" ${arrD[@]}
+arr=($(for i in "${array[@]}"; do echo $i; done | sort -n))
+echo "ASSENDING ORDER" ${arr[@]}
+arr=($(for i in "${array[@]}"; do echo $i; done | sort -nr))
+echo "DESCENDING ORDER" ${arr[@]}
+
 
