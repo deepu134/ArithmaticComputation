@@ -2,4 +2,5 @@
 echo "SORTING ARITHMATIC COMPUTATION PROBLEM"
 read -p "ENTER THREE NUMBERS SEPARATED BY SPACE" A B C
 exp1=$(($A+$B*$C))
-echo $exp1
+exp2=$(($A*$B+$C))
+echo $exp2
