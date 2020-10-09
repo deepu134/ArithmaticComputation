@@ -1,7 +1,7 @@
 #!/bin/bash -x
 echo "SORTING ARITHMATIC COMPUTATION PROBLEM:"
 read -p "ENTER THREE NUMBERS SEPARATED BY SPACE:" A B C
-declare -A arr
+declare -A dict
 exp1=$(($A+$B*$C))
 exp2=$(($A*$B+$C))
 exp3=`echo "$A $B $C" |awk '{print $1/$2+$3}'`
@@ -13,7 +13,14 @@ echo "A%B+C:"$exp4
 j=1
 for i in {$exp1,$exp2,$exp3,$exp4}
 do 
-	arr["Exp"$j]=$i
+	dict["Exp"$j]=$i
 	j=$(($j+1))
 done
-echo "DICTIONARY:"${!arr[@]}=${arr[@]}
+echo "DICTIONARY:"${!dict[@]}=${dict[@]}
+j=0
+for i in ${dict[@]}
+do
+	array[$j]=$i
+	j=$(($j+1))
+done
+echo "ARRAY:" ${array[@]}
